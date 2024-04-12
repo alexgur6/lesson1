@@ -1,22 +1,11 @@
 def volume(a, b, c=None):
     if c is None:
+        # Если передано два аргумента, вычисляем площадь прямоугольника
         return a * b
     else:
+        # Если переданы три аргумента, вычисляем объем параллелепипеда
         return a * b * c
 
-vvod = input().split()
-a = float(vvod[0])
-b = float(vvod[1])
 
-# Проверка количества введенных аргументов
-if len(vvod) == 3:
-    c = float(vvod[2])
-else:
-    c = None
-
-# Вызов функции и вывод результата
-result = volume(a, b, c)
-if c is None:
-    print(result)
-else:
-    print(result)
+print(volume(2, 3))     # Вывод: 6 
+print(volume(2, 3, 4))  # Вывод: 24 
