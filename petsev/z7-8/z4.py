@@ -1,0 +1,15 @@
+from tkinter import *
+root = Tk()
+root.title("Задание 4")
+root.configure(bg="orange")
+root.geometry("300x150")
+e = Entry(root, width=50, bg='blue', fg = "white", borderwidth = 5, relief="solid")
+e.pack()
+e.insert(0, "")
+def myClick():
+    hello = "Привет, " + e.get()
+    myLabel = Label(root, text=hello)
+    myLabel.pack()
+myButton = Button(root, text = "Нажмите", command=myClick, fg="blue", bg="#ffffff", width=10, height=3)
+myButton.pack()
+root.mainloop()
